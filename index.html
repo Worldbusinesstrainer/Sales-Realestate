@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sales Real Estate | Casas y apartamentos en venta y alquiler en Costa Rica</title>
+<meta name="description" content="Sales Real Estate: casas y apartamentos en venta y alquiler en San José, Heredia, Alajuela y Cartago. Tu próximo hogar comienza aquí." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.salesrealestate.cr/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sales Real Estate | Propiedades en Costa Rica" />
+<meta property="og:description" content="Encuentra casas y apartamentos en venta y alquiler en las mejores zonas de Costa Rica." />
+<meta property="og:locale" content="es_CR" />
+<meta property="og:site_name" content="Sales Real Estate" />
+
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Sales Real Estate",
+  "slogan": "Tu próximo hogar comienza aquí",
+  "areaServed": ["San José", "Heredia", "Alajuela", "Cartago", "Guanacaste"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CR",
+    "streetAddress": "[DIRECCIÓN PENDIENTE]"
+  },
+  "telephone": "[TELÉFONO PENDIENTE]",
+  "email": "[CORREO PENDIENTE]",
+  "url": "https://www.salesrealestate.cr/"
+}
+</script>
+
+<style>
+/* ============ RESET & VARIABLES ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#14283F;
+  --navy-soft:#1e3a5a;
+  --white:#FFFFFF;
+  --gold:#C6A66B;
+  --gold-dark:#a8894f;
+  --gray-light:#F4F6F8;
+  --gray-mid:#e2e6eb;
+  --gray-text:#333B45;
+  --gray-muted:#6b7480;
+  --radius:10px;
+  --radius-lg:16px;
+  --shadow-sm:0 1px 3px rgba(20,40,63,.06),0 1px 2px rgba(20,40,63,.04);
+  --shadow-md:0 4px 14px rgba(20,40,63,.08);
+  --shadow-lg:0 12px 32px rgba(20,40,63,.12);
+  --transition:all .25s ease;
+  --container:1200px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:var(--gray-text);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy);font-weight:600;line-height:1.25}
+h1{font-size:clamp(1.9rem,4vw,3.1rem)}
+h2{font-size:clamp(1.5rem,2.6vw,2.2rem)}
+h3{font-size:1.15rem}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block;height:auto}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,select,textarea{font-family:inherit;font-size:1rem}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ============ BOTONES ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.8rem 1.5rem;border-radius:var(--radius);font-weight:600;font-size:.95rem;
+  transition:var(--transition);white-space:nowrap;
+}
+.btn-primary{background:var(--gold);color:var(--navy)}
+.btn-primary:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-dark{background:var(--navy);color:var(--white)}
+.btn-dark:hover{background:var(--navy-soft);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:var(--white)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1eb85a;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-block{width:100%}
+
+/* ============ HEADER ============ */
+.site-header{
+  position:sticky;top:0;z-index:100;background:rgba(255,255,255,.98);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-mid);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.85rem 20px;max-width:var(--container);margin:0 auto;gap:1rem}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo strong{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--navy);font-weight:700;letter-spacing:.3px}
+.logo span{font-size:.62rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-top:3px}
+.nav{display:flex;gap:.35rem;align-items:center}
+.nav a{
+  padding:.5rem .85rem;border-radius:8px;font-size:.9rem;font-weight:500;
+  color:var(--gray-text);transition:var(--transition);
+}
+.nav a:hover,.nav a.active{color:var(--navy);background:var(--gray-light)}
+.header-cta{display:flex;gap:.5rem;align-items:center}
+.menu-toggle{display:none;padding:.5rem;border-radius:8px;color:var(--navy)}
+.menu-toggle:hover{background:var(--gray-light)}
+
+@media (max-width:960px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem;border-bottom:1px solid var(--gray-mid);box-shadow:var(--shadow-md)}
+  .nav.open{display:flex}
+  .nav a{width:100%;text-align:left;padding:.85rem 1rem}
+  .menu-toggle{display:flex}
+  .header-cta .btn-wa span{display:none}
+  .header-cta .btn-wa{padding:.6rem}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:640px;display:flex;align-items:center;
+  background:linear-gradient(rgba(20,40,63,.72),rgba(20,40,63,.55)),
+    url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=80&auto=format') center/cover;
+  color:#fff;padding:4rem 0;
+}
+.hero-content{max-width:900px;text-align:center;margin:0 auto;padding:0 20px}
+.hero .eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;font-weight:600}
+.hero h1{color:#fff;margin-bottom:1rem;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero p{font-size:clamp(1rem,1.6vw,1.15rem);opacity:.95;margin-bottom:2rem;max-width:680px;margin-left:auto;margin-right:auto}
+.hero-buttons{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+
+/* Buscador */
+.search-box{
+  background:#fff;border-radius:var(--radius-lg);padding:1.25rem;
+  box-shadow:var(--shadow-lg);max-width:1000px;margin:0 auto;color:var(--gray-text);
+}
+.search-tabs{display:flex;gap:.25rem;margin-bottom:1rem;background:var(--gray-light);padding:.3rem;border-radius:8px;width:fit-content}
+.search-tab{
+  padding:.5rem 1.25rem;border-radius:6px;font-weight:600;font-size:.85rem;
+  color:var(--gray-muted);transition:var(--transition);
+}
+.search-tab.active{background:#fff;color:var(--navy);box-shadow:var(--shadow-sm)}
+.search-fields{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem}
+.field{display:flex;flex-direction:column;gap:.3rem}
+.field label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-muted)}
+.field select,.field input{
+  padding:.7rem .8rem;border:1.5px solid var(--gray-mid);border-radius:8px;
+  font-size:.9rem;color:var(--gray-text);background:#fff;transition:var(--transition);
+}
+.field select:focus,.field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,166,107,.15)}
+.search-fields .btn{align-self:end;height:44px}
+
+@media (max-width:900px){
+  .search-fields{grid-template-columns:repeat(2,1fr)}
+  .search-fields .btn{grid-column:span 2}
+}
+@media (max-width:520px){
+  .search-fields{grid-template-columns:1fr}
+  .search-fields .btn{grid-column:span 1}
+  .hero{min-height:auto;padding:3rem 0}
+}
+
+/* ============ SECCIONES ============ */
+section{padding:5rem 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 3rem}
+.section-head .eyebrow{color:var(--gold);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;font-weight:600;margin-bottom:.75rem;display:block}
+.section-head p{color:var(--gray-muted);margin-top:.75rem;font-size:1.05rem}
+.bg-light{background:var(--gray-light)}
+
+/* ============ TARJETAS DE PROPIEDAD ============ */
+.properties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media (max-width:960px){.properties-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.properties-grid{grid-template-columns:1fr}}
+
+.property-card{
+  background:#fff;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:var(--transition);
+  display:flex;flex-direction:column;border:1px solid var(--gray-mid);
+}
+.property-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.property-image{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--gray-light)}
+.property-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.property-card:hover .property-image img{transform:scale(1.05)}
+.property-tag{
+  position:absolute;top:12px;left:12px;padding:.35rem .85rem;border-radius:20px;
+  font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+}
+.tag-sale{background:var(--gold);color:var(--navy)}
+.tag-rent{background:var(--navy);color:#fff}
+.fav-btn{
+  position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;
+  color:var(--gray-muted);transition:var(--transition);
+}
+.fav-btn:hover,.fav-btn.active{color:#e74c3c}
+.property-body{padding:1.15rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.property-price{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--navy);font-weight:700}
+.property-price small{font-size:.75rem;color:var(--gray-muted);font-family:'Inter',sans-serif;font-weight:500}
+.property-title{font-size:1rem;font-weight:600;color:var(--navy);line-height:1.35}
+.property-loc{font-size:.85rem;color:var(--gray-muted);display:flex;align-items:center;gap:.35rem}
+.property-features{
+  display:flex;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:var(--gray-muted);
+  padding-top:.75rem;border-top:1px solid var(--gray-mid);margin-top:auto;
+}
+.property-features span{display:flex;align-items:center;gap:.3rem}
+.property-body .btn{margin-top:.5rem}
+.demo-badge{
+  font-size:.65rem;color:var(--gray-muted);background:var(--gray-light);
+  padding:.2rem .5rem;border-radius:4px;text-align:center;margin-top:.4rem;
+}
+
+/* ============ SERVICIOS ============ */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+@media (max-width:960px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.services-grid{grid-template-columns:1fr}}
+.service-card{
+  background:#fff;border-radius:var(--radius-lg);padding:1.75rem;
+  border:1px solid var(--gray-mid);transition:var(--transition);
+  display:flex;flex-direction:column;gap:.85rem;
+}
+.service-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.service-icon{
+  width:48px;height:48px;border-radius:10px;background:var(--gray-light);
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+}
+.service-card h3{font-size:1.05rem}
+.service-card p{font-size:.88rem;color:var(--gray-muted);flex:1}
+
+/* ============ VENTAJAS ============ */
+.advantages{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media (max-width:900px){.advantages{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.advantages{grid-template-columns:1fr}}
+.advantage{
+  display:flex;gap:.85rem;padding:1.25rem;background:#fff;
+  border-radius:var(--radius);border-left:3px solid var(--gold);
+}
+.advantage-icon{color:var(--gold);flex-shrink:0}
+.advantage h4{font-size:.98rem;margin-bottom:.25rem}
+.advantage p{font-size:.85rem;color:var(--gray-muted)}
+
+/* ============ UBICACIONES ============ */
+.locations-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+@media (max-width:900px){.locations-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.locations-grid{grid-template-columns:repeat(2,1fr)}}
+.location-card{
+  position:relative;aspect-ratio:1;border-radius:var(--radius);overflow:hidden;
+  display:flex;align-items:flex-end;padding:1rem;color:#fff;cursor:pointer;
+  background-size:cover;background-position:center;transition:var(--transition);
+}
+.location-card::before{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(20,40,63,.85))}
+.location-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.location-card span{position:relative;font-weight:600;font-size:.95rem}
+
+/* ============ CTA ============ */
+.cta-section{
+  background:linear-gradient(rgba(20,40,63,.88),rgba(20,40,63,.88)),
+    url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80&auto=format') center/cover;
+  color:#fff;text-align:center;padding:5rem 0;
+}
+.cta-section h2{color:#fff}
+.cta-section p{color:rgba(255,255,255,.85);max-width:560px;margin:1rem auto 2rem}
+.cta-section .hero-buttons{margin-bottom:0}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--navy);color:rgba(255,255,255,.75);padding:4rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:2.5rem;margin-bottom:3rem}
+@media (max-width:800px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand strong{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;display:block}
+.footer-brand span{font-size:.65rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase}
+.footer-brand p{font-size:.88rem;margin-top:1rem;line-height:1.7}
+.footer-col h4{color:#fff;font-size:.95rem;font-family:'Inter',sans-serif;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.footer-col a,.footer-col p{display:block;font-size:.88rem;margin-bottom:.6rem;transition:var(--transition);color:rgba(255,255,255,.7)}
+.footer-col a:hover{color:var(--gold)}
+.socials{display:flex;gap:.6rem;margin-top:1rem}
+.socials a{
+  width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;color:#fff;transition:var(--transition);
+}
+.socials a:hover{background:var(--gold);color:var(--navy)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8rem;
+}
+.footer-bottom a{color:rgba(255,255,255,.7)}
+.footer-bottom a:hover{color:var(--gold)}
+
+/* ============ PÁGINA PROPIEDADES ============ */
+.page-hero{
+  background:var(--navy);color:#fff;padding:3.5rem 0 2.5rem;text-align:center;
+}
+.page-hero h1{color:#fff;margin-bottom:.75rem}
+.page-hero p{color:rgba(255,255,255,.8);max-width:640px;margin:0 auto}
+
+.filters-bar{
+  background:#fff;border-radius:var(--radius-lg);padding:1.25rem;
+  box-shadow:var(--shadow-md);margin:-2rem auto 2rem;max-width:var(--container);
+  position:relative;z-index:10;
+}
+.filters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+@media (max-width:900px){.filters-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.filters-grid{grid-template-columns:1fr}}
+.results-bar{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+  gap:1rem;margin-bottom:1.5rem;font-size:.9rem;color:var(--gray-muted);
+}
+.results-bar select{padding:.5rem .8rem;border:1.5px solid var(--gray-mid);border-radius:8px;font-size:.88rem}
+.empty-state{
+  text-align:center;padding:4rem 1rem;color:var(--gray-muted);
+  background:var(--gray-light);border-radius:var(--radius-lg);
+}
+.empty-state h3{margin-bottom:.5rem;color:var(--navy)}
+
+/* ============ FICHA PROPIEDAD ============ */
+.property-detail{padding:2rem 0 4rem}
+.breadcrumb{font-size:.85rem;color:var(--gray-muted);margin-bottom:1.5rem}
+.breadcrumb a:hover{color:var(--gold)}
+.gallery-main{
+  aspect-ratio:16/10;border-radius:var(--radius-lg);overflow:hidden;
+  background:var(--gray-light);position:relative;margin-bottom:.75rem;
+}
+.gallery-main img{width:100%;height:100%;object-fit:cover}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem}
+.gallery-thumbs button{
+  aspect-ratio:1;border-radius:8px;overflow:hidden;opacity:.7;transition:var(--transition);
+}
+.gallery-thumbs button:hover,.gallery-thumbs button.active{opacity:1;outline:2px solid var(--gold)}
+.gallery-thumbs img{width:100%;height:100%;object-fit:cover}
+.detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:2.5rem;margin-top:2rem}
+@media (max-width:900px){.detail-grid{grid-template-columns:1fr}}
+.detail-features{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0;
+  padding:1.5rem;background:var(--gray-light);border-radius:var(--radius);
+}
+@media (max-width:520px){.detail-features{grid-template-columns:repeat(2,1fr)}}
+.detail-feature{text-align:center}
+.detail-feature strong{display:block;font-size:1.25rem;color:var(--navy);font-family:'Playfair Display',serif}
+.detail-feature span{font-size:.75rem;color:var(--gray-muted);text-transform:uppercase;letter-spacing:.05em}
+.contact-box{
+  background:#fff;border:1px solid var(--gray-mid);border-radius:var(--radius-lg);
+  padding:1.5rem;box-shadow:var(--shadow-md);position:sticky;top:100px;
+}
+.contact-box h3{margin-bottom:1rem}
+.price-box{
+  font-family:'Playfair Display',serif;font-size:2rem;color:var(--navy);
+  font-weight:700;margin-bottom:1rem;
+}
+.price-box small{font-size:.85rem;color:var(--gray-muted);font-family:'Inter',sans-serif}
+
+/* ============ FORMULARIOS ============ */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:600px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--gray-text)}
+.form-group label .req{color:#e74c3c}
+.form-group input,.form-group select,.form-group textarea{
+  padding:.75rem .9rem;border:1.5px solid var(--gray-mid);border-radius:8px;
+  font-size:.92rem;transition:var(--transition);background:#fff;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,166,107,.15);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group.error input,.form-group.error select,.form-group.error textarea{border-color:#e74c3c}
+.form-error{color:#e74c3c;font-size:.78rem;display:none}
+.form-group.error .form-error{display:block}
+.checkbox-group{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem;color:var(--gray-muted)}
+.checkbox-group input{width:auto;margin-top:.2rem}
+.form-success{
+  background:#e8f5e9;border:1px solid #4caf50;color:#2e7d32;
+  padding:1rem;border-radius:8px;margin-bottom:1rem;font-size:.9rem;
+}
+.form-notice{
+  background:#fff8e1;border:1px solid var(--gold);color:#8a6d2b;
+  padding:.85rem;border-radius:8px;font-size:.82rem;margin-bottom:1rem;
+}
+
+/* ============ UTILIDADES ============ */
+.text-center{text-align:center}
+.mt-2{margin-top:2rem}
+.hidden{display:none !important}
+.fade-in{animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Accesibilidad */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#/" class="logo" aria-label="Sales Real Estate - Inicio">
+      <strong>Sales Real Estate</strong>
+      <span>Tu próximo hogar comienza aquí</span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#/" data-route="/">Inicio</a>
+      <a href="#/comprar" data-route="/comprar">Comprar</a>
+      <a href="#/alquilar" data-route="/alquilar">Alquilar</a>
+      <a href="#/publicar" data-route="/publicar">Publicar propiedad</a>
+      <a href="#/nosotros" data-route="/nosotros">Nosotros</a>
+      <a href="#/contacto" data-route="/contacto">Contacto</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-wa" id="headerWa" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ APP ============ -->
+<main id="app" role="main"></main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <strong>Sales Real Estate</strong>
+        <span>Tu próximo hogar comienza aquí</span>
+        <p>Asesoría inmobiliaria en Costa Rica para la compra, venta y alquiler de casas y apartamentos en las principales zonas del país.</p>
+        <div class="socials">
+          <a href="[FACEBOOK]" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+          <a href="[INSTAGRAM]" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+          <a href="[LINKEDIN]" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="#/comprar">Comprar</a>
+        <a href="#/alquilar">Alquilar</a>
+        <a href="#/publicar">Publicar propiedad</a>
+        <a href="#/nosotros">Nosotros</a>
+      </div>
+      <div class="footer-col">
+        <h4>Zonas</h4>
+        <a href="#/comprar?provincia=San+Jos%C3%A9">San José</a>
+        <a href="#/comprar?provincia=Heredia">Heredia</a>
+        <a href="#/comprar?provincia=Alajuela">Alajuela</a>
+        <a href="#/comprar?provincia=Cartago">Cartago</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📞 [TELÉFONO]</p>
+        <p>✉️ [CORREO]</p>
+        <p>📍 [DIRECCIÓN]</p>
+        <p>🕒 [HORARIO]</p>
+        <a href="#/contacto">Formulario de contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Sales Real Estate. Todos los derechos reservados.</span>
+      <span>
+        <a href="#/privacidad">Política de privacidad</a> ·
+        <a href="#/terminos">Términos de uso</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   SALES REAL ESTATE — APLICACIÓN
+   Arquitectura:
+   - CONFIG: datos editables de la empresa
+   - PROPERTIES: inventario (demo claramente identificado)
+   - Router: SPA basado en hash
+   - Views: funciones que devuelven HTML
+   - Utils: helpers
+   ========================================================= */
+
+/* ================= CONFIG (EDITABLE) ================= */
+const CONFIG = {
+  companyName: "Sales Real Estate",
+  phone: "[TELÉFONO]",
+  whatsapp: "50600000000", // ⚠️ Reemplazar con número real (código de país + número, sin +)
+  email: "[CORREO]",
+  address: "[DIRECCIÓN]",
+  schedule: "[HORARIO]",
+  // Endpoint del formulario. Opciones:
+  // - Formspree:  "https://formspree.io/f/XXXXXXX"
+  // - Web3Forms:  "https://api.web3forms.com/submit" (con access_key en el body)
+  // - Backend propio
+  // Déjalo vacío para ver el aviso de configuración pendiente.
+  formEndpoint: "",
+  formAccessKey: ""
+};
+
+/* ================= PROPIEDADES (DEMO) ================= */
+/* ⚠️ TODAS las propiedades siguientes son EJEMPLOS de demostración.
+   No representan inmuebles reales de Sales Real Estate. Reemplazar por inventario real. */
+const PROPERTIES = [
+  {
+    id: "demo-001",
+    ref: "DEMO-001",
+    title: "Casa moderna con jardín",
+    operation: "venta",
+    type: "casa",
+    price: 185000,
+    currency: "USD",
+    province: "Heredia",
+    canton: "San Rafael",
+    location: "San Rafael, Heredia",
+    bedrooms: 3,
+    bathrooms: 2,
+    parking: 2,
+    area: 210,
+    lotArea: 320,
+    status: "disponible",
+    featured: true,
+    demo: true,
+    images: [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80&auto=format"
+    ],
+    description: "Ejemplo de ficha de propiedad. Casa de dos niveles con amplios espacios, cocina abierta, jardín privado y acabados modernos. Ubicada en zona residencial cercana a servicios. (Propiedad de demostración — no real)."
+  },
+  {
+    id: "demo-002",
+    ref: "DEMO-002",
+    title: "Apartamento con vista panorámica",
+    operation: "venta",
+    type: "apartamento",
+    price: 145000,
+    currency: "USD",
+    province: "San José",
+    canton: "Escazú",
+    location: "Escazú, San José",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 1,
+    area: 120,
+    lotArea: null,
+    status: "disponible",
+    featured: true,
+    demo: true,
+    images: [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80&auto=format"
+    ],
+    description: "Ejemplo de apartamento en torre con amenidades: piscina, gimnasio y seguridad 24/7. Acabados de primera. (Propiedad de demostración — no real)."
+  },
+  {
+    id: "demo-003",
+    ref: "DEMO-003",
+    title: "Casa familiar en alquiler",
+    operation: "alquiler",
+    type: "casa",
+    price: 1200,
+    currency: "USD",
+    province: "Alajuela",
+    canton: "Santa Ana",
+    location: "Santa Ana, Alajuela",
+    bedrooms: 4,
+    bathrooms: 3,
+    parking: 2,
+    area: 280,
+    lotArea: 400,
+    status: "disponible",
+    featured: true,
+    demo: true,
+    images: [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80&auto=format"
+    ],
+    description: "Ejemplo de casa en alquiler mensual con amplios jardines, zona de BBQ y cerca de colegios. (Propiedad de demostración — no real)."
+  },
+  {
+    id: "demo-004",
+    ref: "DEMO-004",
+    title: "Apartamento ejecutivo amueblado",
+    operation: "alquiler",
+    type: "apartamento",
+    price: 850,
+    currency: "USD",
+    province: "San José",
+    canton: "Sabana",
+    location: "Sabana, San José",
+    bedrooms: 1,
+    bathrooms: 1,
+    parking: 1,
+    area: 65,
+    lotArea: null,
+    status: "disponible",
+    featured: true,
+    demo: true,
+    images: [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format"
+    ],
+    description: "Ejemplo de apartamento amueblado ideal para profesionales. Incluye servicios básicos. (Propiedad de demostración — no real)."
+  },
+  {
+    id: "demo-005",
+    ref: "DEMO-005",
+    title: "Casa de playa en Guanacaste",
+    operation: "venta",
+    type: "casa",
+    price: 320000,
+    currency: "USD",
+    province: "Guanacaste",
+    canton: "Santa Cruz",
+    location: "Tamarindo, Guanacaste",
+    bedrooms: 3,
+    bathrooms: 3,
+    parking: 2,
+    area: 240,
+    lotArea: 600,
+    status: "disponible",
+    featured: true,
+    demo: true,
+    images: [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80&auto=format"
+    ],
+    description: "Ejemplo de casa vacacional cerca de la playa con piscina privada. (Propiedad de demostración — no real)."
+  },
+  {
+    id: "demo-006",
+    ref: "DEMO-006",
+    title: "Apartamento en Cartago",
+    operation: "venta",
+    type: "apartamento",
+    price: 98000,
+    currency: "USD",
+    province: "Cartago",
+    canton: "Tres Ríos",
+    location: "Tres Ríos, Cartago",
+    bedrooms: 2,
+    bathrooms: 1,
+    parking: 1,
+    area: 88,
+    lotArea: null,
+    status: "disponible",
+    featured: false,
+    demo: true,
+    images: [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80&auto=format"
+    ],
+    description: "Ejemplo de apartamento en condominio cerrado con área verde. (Propiedad de demostración — no real)."
+  }
+];
+
+/* ================= UTILIDADES ================= */
+const $ = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+function formatPrice(p) {
+  const n = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(p.price);
+  return p.operation === 'alquiler'
+    ? `$${n} <small>/ mes</small>`
+    : `$${n}`;
+}
+
+function waLink(message) {
+  const num = CONFIG.whatsapp.replace(/\D/g, '');
+  return `https://wa.me/${num}?text=${encodeURIComponent(message)}`;
+}
+
+function escapeHtml(str = '') {
+  return String(str).replace(/[&<>"']/g, s => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[s]));
+}
+
+function getParam(name) {
+  const hash = window.location.hash || '';
+  const qIndex = hash.indexOf('?');
+  if (qIndex === -1) return null;
+  const params = new URLSearchParams(hash.slice(qIndex + 1));
+  return params.get(name);
+}
+
+function getAllParams() {
+  const hash = window.location.hash || '';
+  const qIndex = hash.indexOf('?');
+  if (qIndex === -1) return {};
+  const out = {};
+  new URLSearchParams(hash.slice(qIndex + 1)).forEach((v, k) => out[k] = v);
+  return out;
+}
+
+function svgIcon(name, size = 16) {
+  const icons = {
+    bed: '<path d="M2 17h20v4H2zM2 7h20v10H2zM6 7V5a2 2 0 012-2h8a2 2 0 012 2v2"/>',
+    bath: '<path d="M4 12V6a2 2 0 012-2h2a2 2 0 012 2v1M2 12h20v4a4 4 0 01-4 4H6a4 4 0 01-4-4v-4z"/>',
+    car: '<path d="M5 17h14M5 17a2 2 0 11-4 0 2 2 0 014 0zM23 17a2 2 0 11-4 0 2 2 0 014 0zM3 9l2-5h14l2 5M3 9v6h18V9"/>',
+    area: '<path d="M3 3h18v18H3zM9 3v18M3 9h18"/>',
+    pin: '<path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/>',
+    heart: '<path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78l8.84 8.84 8.84-8.84a5.5 5.5 0 000-7.78z"/>'
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${icons[name] || ''}</svg>`;
+}
+
+/* ================= COMPONENTES ================= */
+function propertyCard(p) {
+  const tag = p.operation === 'venta' ? 'En venta' : 'En alquiler';
+  const tagClass = p.operation === 'venta' ? 'tag-sale' : 'tag-rent';
+  return `
+    <article class="property-card fade-in">
+      <div class="property-image">
+        <img src="${p.images[0]}" alt="${escapeHtml(p.title)} en ${escapeHtml(p.location)}" loading="lazy" width="400" height="300" />
+        <span class="property-tag ${tagClass}">${tag}</span>
+        <button class="fav-btn" aria-label="Guardar en favoritos" data-fav="${p.id}">${svgIcon('heart', 18)}</button>
+      </div>
+      <div class="property-body">
+        <div class="property-price">${formatPrice(p)}</div>
+        <h3 class="property-title">${escapeHtml(p.title)}</h3>
+        <div class="property-loc">${svgIcon('pin', 14)} ${escapeHtml(p.location)}</div>
+        <div class="property-features">
+          <span>${svgIcon('bed', 14)} ${p.bedrooms} hab.</span>
+          <span>${svgIcon('bath', 14)} ${p.bathrooms} baños</span>
+          <span>${svgIcon('car', 14)} ${p.parking}</span>
+          <span>${svgIcon('area', 14)} ${p.area} m²</span>
+        </div>
+        <a class="btn btn-dark btn-block" href="#/propiedad/${p.id}">Ver propiedad</a>
+        ${p.demo ? '<div class="demo-badge">Ejemplo de demostración — no es una oferta real</div>' : ''}
+      </div>
+    </article>`;
+}
+
+/* ================= FILTRADO ================= */
+function filterProperties(list, filters) {
+  return list.filter(p => {
+    if (filters.operation && p.operation !== filters.operation) return false;
+    if (filters.type && p.type !== filters.type) return false;
+    if (filters.province && p.province !== filters.province) return false;
+    if (filters.canton && p.canton !== filters.canton) return false;
+    if (filters.minPrice && p.price < Number(filters.minPrice)) return false;
+    if (filters.maxPrice && p.price > Number(filters.maxPrice)) return false;
+    if (filters.bedrooms && p.bedrooms < Number(filters.bedrooms)) return false;
+    if (filters.bathrooms && p.bathrooms < Number(filters.bathrooms)) return false;
+    if (filters.parking && p.parking < Number(filters.parking)) return false;
+    if (filters.minArea && p.area < Number(filters.minArea)) return false;
+    if (filters.maxArea && p.area > Number(filters.maxArea)) return false;
+    return true;
+  });
+}
+
+function sortProperties(list, sort) {
+  const copy = [...list];
+  if (sort === 'price-asc') copy.sort((a,b) => a.price - b.price);
+  else if (sort === 'price-desc') copy.sort((a,b) => b.price - a.price);
+  // 'recent' => orden original (demo)
+  return copy;
+}
+
+/* ================= VISTAS ================= */
+const VIEWS = {};
+
+/* --- HOME --- */
+VIEWS.home = () => {
+  const featured = PROPERTIES.filter(p => p.featured).slice(0, 6);
+  const provinces = ['San José', 'Heredia', 'Alajuela', 'Cartago'];
+  const zones = [
+    { name: 'San José', img: 'https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=600&q=80&auto=format' },
+    { name: 'Heredia', img: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80&auto=format' },
+    { name: 'Alajuela', img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format' },
+    { name: 'Cartago', img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80&auto=format' },
+    { name: 'Guanacaste', img: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80&auto=format' }
+  ];
+
+  return `
+    <!-- HERO -->
+    <section class="hero" style="padding-top:2rem">
+      <div class="hero-content">
+        <span class="eyebrow">Sales Real Estate · Costa Rica</span>
+        <h1>Encuentra el lugar donde comienza tu próxima historia</h1>
+        <p>Descubre casas y apartamentos en venta y alquiler en las mejores zonas de Costa Rica con Sales Real Estate.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#/comprar">Quiero comprar</a>
+          <a class="btn btn-outline" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.4)" href="#/alquilar">Quiero alquilar</a>
+        </div>
+
+        <!-- BUSCADOR -->
+        <form class="search-box" id="heroSearch" role="search" aria-label="Buscar propiedades">
+          <div class="search-tabs" role="tablist">
+            <button type="button" class="search-tab active" data-op="venta" role="tab" aria-selected="true">Comprar</button>
+            <button type="button" class="search-tab" data-op="alquiler" role="tab" aria-selected="false">Alquilar</button>
+          </div>
+          <div class="search-fields">
+            <div class="field">
+              <label for="hs-type">Tipo</label>
+              <select id="hs-type" name="type">
+                <option value="">Todos</option>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="hs-province">Ubicación</label>
+              <select id="hs-province" name="province">
+                <option value="">Todas</option>
+                ${provinces.map(p => `<option value="${p}">${p}</option>`).join('')}
+                <option value="Guanacaste">Guanacaste</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="hs-min">Precio mín.</label>
+              <input id="hs-min" type="number" name="minPrice" min="0" placeholder="0" />
+            </div>
+            <div class="field">
+              <label for="hs-max">Precio máx.</label>
+              <input id="hs-max" type="number" name="maxPrice" min="0" placeholder="Sin límite" />
+            </div>
+            <button class="btn btn-primary" type="submit">Buscar propiedades</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- PROPIEDADES DESTACADAS -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Propiedades destacadas</span>
+          <h2>Opciones seleccionadas para ti</h2>
+          <p>Una muestra de propiedades disponibles. Los anuncios de demostración están claramente identificados.</p>
+        </div>
+        <div class="properties-grid">
+          ${featured.map(propertyCard).join('')}
+        </div>
+        <div class="text-center mt-2">
+          <a class="btn btn-outline" href="#/comprar">Ver todas las propiedades</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nuestros servicios</span>
+          <h2>Todo lo que necesitas para tu próximo paso</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">${svgIcon('pin', 22)}</div>
+            <h3>Compra de propiedades</h3>
+            <p>Encuentra una propiedad que se adapte a tus necesidades y presupuesto con el acompañamiento de Sales Real Estate.</p>
+            <a class="btn btn-outline" href="#/contacto">Más información</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">${svgIcon('bed', 22)}</div>
+            <h3>Alquiler de propiedades</h3>
+            <p>Descubre opciones de alquiler para diferentes estilos de vida y necesidades.</p>
+            <a class="btn btn-outline" href="#/alquilar">Ver alquileres</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">${svgIcon('area', 22)}</div>
+            <h3>Venta de propiedades</h3>
+            <p>Promociona tu propiedad y conecta con compradores potenciales.</p>
+            <a class="btn btn-outline" href="#/publicar">Publicar propiedad</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">${svgIcon('heart', 22)}</div>
+            <h3>Alquiler para propietarios</h3>
+            <p>Recibe asesoría para anunciar tu inmueble y encontrar posibles arrendatarios.</p>
+            <a class="btn btn-outline" href="#/publicar">Más información</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTAJAS -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Por qué elegirnos</span>
+          <h2>Una experiencia inmobiliaria más sencilla y transparente</h2>
+        </div>
+        <div class="advantages">
+          <div class="advantage">
+            <div class="advantage-icon">${svgIcon('heart', 22)}</div>
+            <div><h4>Atención personalizada</h4><p>Te acompañamos según tus necesidades y presupuesto.</p></div>
+          </div>
+          <div class="advantage">
+            <div class="advantage-icon">${svgIcon('area', 22)}</div>
+            <div><h4>Opciones según presupuesto</h4><p>Filtramos propiedades por ubicación y rango de precio.</p></div>
+          </div>
+          <div class="advantage">
+            <div class="advantage-icon">${svgIcon('pin', 22)}</div>
+            <div><h4>Información organizada</h4><p>Cada propiedad cuenta con ficha detallada y clara.</p></div>
+          </div>
+          <div class="advantage">
+            <div class="advantage-icon">${svgIcon('bed', 22)}</div>
+            <div><h4>Comunicación directa</h4><p>Contacta a un asesor por WhatsApp o formulario.</p></div>
+          </div>
+          <div class="advantage">
+            <div class="advantage-icon">${svgIcon('bath', 22)}</div>
+            <div><h4>Acompañamiento</h4><p>Te orientamos durante el proceso de compra o alquiler.</p></div>
+          </div>
+          <div class="advantage">
+            <div class="advantage-icon">${svgIcon('car', 22)}</div>
+            <div><h4>Para propietarios</h4><p>Orientación para anunciar y promocionar tu inmueble.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIONES -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Zonas de operación</span>
+          <h2>Explora por ubicación</h2>
+          <p>Mostramos únicamente las zonas con propiedades asociadas en nuestro inventario actual.</p>
+        </div>
+        <div class="locations-grid">
+          ${zones.map(z => `
+            <a class="location-card" href="#/comprar?provincia=${encodeURIComponent(z.name)}" style="background-image:url('${z.img}')">
+              <span>${z.name}</span>
+            </a>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>¿Todavía no encuentras la propiedad ideal?</h2>
+        <p>Cuéntanos qué buscas y en Sales Real Estate te ayudaremos a explorar opciones disponibles.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#/contacto">Contactar a un asesor</a>
+          <a class="btn btn-wa" href="${waLink('Hola, estoy buscando una propiedad en Costa Rica. Me gustaría recibir información sobre las opciones disponibles de Sales Real Estate.')}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  `;
+};
+
+/* --- LISTADO (comprar / alquilar) --- */
+function renderListing({ operation, title, seoTitle, intro }) {
+  const params = getAllParams();
+  const provinces = [...new Set(PROPERTIES.filter(p => p.operation === operation).map(p => p.province))].sort();
+  const cantons = [...new Set(PROPERTIES.filter(p => p.operation === operation).map(p => p.canton))].sort();
+
+  const currentFilters = {
+    operation,
+    type: params.type || '',
+    province: params.province || '',
+    canton: params.canton || '',
+    minPrice: params.minPrice || '',
+    maxPrice: params.maxPrice || '',
+    bedrooms: params.bedrooms || '',
+    bathrooms: params.bathrooms || '',
+    parking: params.parking || '',
+    minArea: params.minArea || '',
+    maxArea: params.maxArea || ''
+  };
+
+  const results = sortProperties(filterProperties(PROPERTIES, currentFilters), params.sort || 'recent');
+
+  return `
+    <section class="page-hero">
+      <div class="container">
+        <h1>${title}</h1>
+        <p>${intro}</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="filters-bar" id="listingFilters" aria-label="Filtros de búsqueda">
+        <div class="filters-grid">
+          <div class="field">
+            <label for="f-type">Tipo de inmueble</label>
+            <select id="f-type" name="type">
+              <option value="">Todos</option>
+              <option value="casa" ${currentFilters.type==='casa'?'selected':''}>Casa</option>
+              <option value="apartamento" ${currentFilters.type==='apartamento'?'selected':''}>Apartamento</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-province">Provincia</label>
+            <select id="f-province" name="province">
+              <option value="">Todas</option>
+              ${provinces.map(p => `<option value="${p}" ${currentFilters.province===p?'selected':''}>${p}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-canton">Cantón</label>
+            <select id="f-canton" name="canton">
+              <option value="">Todos</option>
+              ${cantons.map(c => `<option value="${c}" ${currentFilters.canton===c?'selected':''}>${c}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-bedrooms">Habitaciones (mín.)</label>
+            <select id="f-bedrooms" name="bedrooms">
+              <option value="">Cualquiera</option>
+              ${[1,2,3,4,5].map(n => `<option value="${n}" ${currentFilters.bedrooms==n?'selected':''}>${n}+</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-bathrooms">Baños (mín.)</label>
+            <select id="f-bathrooms" name="bathrooms">
+              <option value="">Cualquiera</option>
+              ${[1,2,3,4].map(n => `<option value="${n}" ${currentFilters.bathrooms==n?'selected':''}>${n}+</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-parking">Estacionamientos</label>
+            <select id="f-parking" name="parking">
+              <option value="">Cualquiera</option>
+              ${[1,2,3].map(n => `<option value="${n}" ${currentFilters.parking==n?'selected':''}>${n}+</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-minPrice">Precio mínimo (USD)</label>
+            <input id="f-minPrice" type="number" name="minPrice" min="0" value="${currentFilters.minPrice}" placeholder="0" />
+          </div>
+          <div class="field">
+            <label for="f-maxPrice">Precio máximo (USD)</label>
+            <input id="f-maxPrice" type="number" name="maxPrice" min="0" value="${currentFilters.maxPrice}" placeholder="Sin límite" />
+          </div>
+          <div class="field">
+            <label for="f-minArea">Área mín. (m²)</label>
+            <input id="f-minArea" type="number" name="minArea" min="0" value="${currentFilters.minArea}" placeholder="0" />
+          </div>
+          <div class="field">
+            <label for="f-maxArea">Área máx. (m²)</label>
+            <input id="f-maxArea" type="number" name="maxArea" min="0" value="${currentFilters.maxArea}" placeholder="Sin límite" />
+          </div>
+          <div class="field" style="grid-column:span 2">
+            <label>&nbsp;</label>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-primary" type="submit" style="flex:1">Aplicar filtros</button>
+              <button class="btn btn-outline" type="button" id="clearFilters">Limpiar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="results-bar">
+        <span><strong>${results.length}</strong> propiedad${results.length === 1 ? '' : 'es'} encontrada${results.length === 1 ? '' : 's'}</span>
+        <div style="display:flex;gap:.75rem;align-items:center">
+          <label for="sortSelect" style="font-size:.85rem">Ordenar por:</label>
+          <select id="sortSelect">
+            <option value="recent" ${params.sort==='recent'||!params.sort?'selected':''}>Más recientes</option>
+            <option value="price-asc" ${params.sort==='price-asc'?'selected':''}>Precio: menor a mayor</option>
+            <option value="price-desc" ${params.sort==='price-desc'?'selected':''}>Precio: mayor a menor</option>
+          </select>
+        </div>
+      </div>
+
+      ${results.length === 0 ? `
+        <div class="empty-state">
+          <h3>No encontramos propiedades con esos criterios</h3>
+          <p>Intenta ajustar los filtros o <a href="#/contacto" style="color:var(--gold)">contáctanos</a> para ayudarte a encontrar opciones.</p>
+        </div>
+      ` : `
+        <div class="properties-grid">
+          ${results.map(propertyCard).join('')}
+        </div>
+      `}
+    </div>
+  `;
+}
+
+VIEWS.comprar = () => renderListing({
+  operation: 'venta',
+  title: 'Casas y apartamentos en venta en Costa Rica',
+  intro: 'Explora propiedades disponibles para compra en San José, Heredia, Alajuela, Cartago y otras zonas.',
+  seoTitle: 'Casas y apartamentos en venta en Costa Rica | Sales Real Estate'
+});
+
+VIEWS.alquilar = () => renderListing({
+  operation: 'alquiler',
+  title: 'Casas y apartamentos en alquiler en Costa Rica',
+  intro: 'Opciones de alquiler mensual en las principales zonas del país. Los precios mostrados corresponden al alquiler mensual.',
+  seoTitle: 'Casas y apartamentos en alquiler en Costa Rica | Sales Real Estate'
+});
+
+/* --- DETALLE DE PROPIEDAD --- */
+VIEWS.propiedad = (id) => {
+  const p = PROPERTIES.find(x => x.id === id);
+  if (!p) {
+    return `
+      <section class="page-hero"><div class="container"><h1>Propiedad no encontrada</h1></div></section>
+      <div class="container" style="padding:4rem 20px;text-align:center">
+        <p>La propiedad que buscas no existe o fue retirada.</p>
+        <a class="btn btn-primary mt-2" href="#/comprar">Ver propiedades disponibles</a>
+      </div>`;
+  }
+
+  const tag = p.operation === 'venta' ? 'En venta' : 'En alquiler';
+  const similar = PROPERTIES
+    .filter(x => x.id !== p.id && (x.operation === p.operation || x.province === p.province))
+    .slice(0, 3);
+
+  const waMsg = `Hola, me interesa obtener más información sobre la propiedad ${p.ref} (${p.title}). ¿Podrían indicarme si está disponible y cómo puedo coordinar una visita?`;
+
+  return `
+    <section class="property-detail">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="#/">Inicio</a> ›
+          <a href="#/${p.operation === 'venta' ? 'comprar' : 'alquilar'}">${p.operation === 'venta' ? 'Comprar' : 'Alquilar'}</a> ›
+          <span>${escapeHtml(p.title)}</span>
+        </nav>
+
+        <!-- GALERÍA -->
+        <div class="gallery-main">
+          <img id="galleryMainImg" src="${p.images[0]}" alt="${escapeHtml(p.title)} — imagen 1" />
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs">
+          ${p.images.map((img, i) => `
+            <button class="${i===0?'active':''}" data-img="${img}" data-index="${i}" aria-label="Ver imagen ${i+1}">
+              <img src="${img}" alt="${escapeHtml(p.title)} — miniatura ${i+1}" loading="lazy" />
+            </button>
+          `).join('')}
+        </div>
+
+        <div class="detail-grid">
+          <!-- INFO PRINCIPAL -->
+          <div>
+            <span class="property-tag ${p.operation==='venta'?'tag-sale':'tag-rent'}" style="position:static;display:inline-block;margin-bottom:1rem">${tag}</span>
+            <h1 style="font-size:1.9rem;margin-bottom:.5rem">${escapeHtml(p.title)}</h1>
+            <p style="color:var(--gray-muted);margin-bottom:1rem">${svgIcon('pin', 14)} ${escapeHtml(p.location)}</p>
+            <div class="price-box">${formatPrice(p)}</div>
+
+            <div class="detail-features">
+              <div class="detail-feature"><strong>${p.bedrooms}</strong><span>Habitaciones</span></div>
+              <div class="detail-feature"><strong>${p.bathrooms}</strong><span>Baños</span></div>
+              <div class="detail-feature"><strong>${p.parking}</strong><span>Estacionamientos</span></div>
+              <div class="detail-feature"><strong>${p.area}</strong><span>m² construcción</span></div>
+              ${p.lotArea ? `<div class="detail-feature"><strong>${p.lotArea}</strong><span>m² terreno</span></div>` : ''}
+              <div class="detail-feature"><strong>${escapeHtml(p.type)}</strong><span>Tipo</span></div>
+            </div>
+
+            <h2 style="font-size:1.3rem;margin:2rem 0 .75rem">Descripción</h2>
+            <p style="color:var(--gray-muted);line-height:1.8">${escapeHtml(p.description)}</p>
+
+            <h2 style="font-size:1.3rem;margin:2rem 0 .75rem">Información adicional</h2>
+            <ul style="color:var(--gray-muted);padding-left:1.25rem;line-height:2">
+              <li><strong>Referencia:</strong> ${p.ref}</li>
+              <li><strong>Estado:</strong> ${p.status === 'disponible' ? 'Disponible' : 'No disponible'}</li>
+              <li><strong>Provincia:</strong> ${p.province}</li>
+              <li><strong>Cantón:</strong> ${p.canton}</li>
+              <li><strong>Moneda:</strong> ${p.currency}</li>
+            </ul>
+
+            <h2 style="font-size:1.3rem;margin:2rem 0 .75rem">Ubicación</h2>
+            <div style="background:var(--gray-light);border-radius:var(--radius);padding:1.25rem;color:var(--gray-muted);font-size:.9rem">
+              📍 ${escapeHtml(p.location)} — El mapa interactivo se mostrará cuando se conecte Google Maps o un proveedor autorizado con la dirección verificada.
+            </div>
+          </div>
+
+          <!-- CONTACTO LATERAL -->
+          <aside>
+            <div class="contact-box">
+              <h3>¿Te interesa esta propiedad?</h3>
+              <p style="font-size:.88rem;color:var(--gray-muted);margin-bottom:1rem">Contáctanos y un asesor te responderá a la brevedad.</p>
+
+              <a class="btn btn-wa btn-block" style="margin-bottom:.6rem" href="${waLink(waMsg)}" target="_blank" rel="noopener">
+                Consultar por WhatsApp
+              </a>
+
+              <button class="btn btn-outline btn-block" style="margin-bottom:1rem" id="requestVisitBtn" data-ref="${p.ref}" data-title="${escapeHtml(p.title)}">
+                Solicitar una visita
+              </button>
+
+              <form id="propertyContactForm" data-ref="${p.ref}" data-title="${escapeHtml(p.title)}" novalidate>
+                <div id="propFormMsg"></div>
+                <div class="form-group">
+                  <label for="pc-name">Nombre completo <span class="req">*</span></label>
+                  <input id="pc-name" name="name" type="text" required />
+                  <span class="form-error">Ingresa tu nombre.</span>
+                </div>
+                <div class="form-group">
+                  <label for="pc-email">Correo electrónico <span class="req">*</span></label>
+                  <input id="pc-email" name="email" type="email" required />
+                  <span class="form-error">Ingresa un correo válido.</span>
+                </div>
+                <div class="form-group">
+                  <label for="pc-phone">Teléfono <span class="req">*</span></label>
+                  <input id="pc-phone" name="phone" type="tel" required />
+                  <span class="form-error">Ingresa tu teléfono.</span>
+                </div>
+                <div class="form-group">
+                  <label for="pc-message">Mensaje</label>
+                  <textarea id="pc-message" name="message" rows="3" placeholder="Quiero más información sobre esta propiedad..."></textarea>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Enviar consulta</button>
+                <p style="font-size:.72rem;color:var(--gray-muted);margin-top:.75rem">
+                  Al enviar aceptas nuestra <a href="#/privacidad" style="color:var(--gold)">política de privacidad</a>.
+                </p>
+              </form>
+            </div>
+          </aside>
+        </div>
+
+        ${similar.length ? `
+          <div style="margin-top:4rem">
+            <h2 style="margin-bottom:1.5rem">Propiedades similares</h2>
+            <div class="properties-grid">
+              ${similar.map(propertyCard).join('')}
+            </div>
+          </div>
+        ` : ''}
+      </div>
+    </section>`;
+};
+
+/* --- PUBLICAR PROPIEDAD --- */
+VIEWS.publicar = () => `
+  <section class="page-hero">
+    <div class="container">
+      <h1>¿Quieres vender o alquilar tu propiedad?</h1>
+      <p>Comparte los datos de tu inmueble para conversar con Sales Real Estate sobre las opciones de publicación.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width:760px">
+      <div id="publishFormContainer">
+        <div class="form-notice" id="publishNotice">
+          <strong>Nota:</strong> este formulario requiere configurar un endpoint real para enviar los datos.
+          Actualmente está en modo demostración. Consulta la sección "Servicios externos pendientes" al final.
+        </div>
+
+        <form id="publishForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="pub-name">Nombre del propietario <span class="req">*</span></label>
+              <input id="pub-name" name="name" type="text" required />
+              <span class="form-error">Ingresa tu nombre.</span>
+            </div>
+            <div class="form-group">
+              <label for="pub-email">Correo electrónico <span class="req">*</span></label>
+              <input id="pub-email" name="email" type="email" required />
+              <span class="form-error">Ingresa un correo válido.</span>
+            </div>
+            <div class="form-group">
+              <label for="pub-phone">Teléfono <span class="req">*</span></label>
+              <input id="pub-phone" name="phone" type="tel" required />
+              <span class="form-error">Ingresa tu teléfono.</span>
+            </div>
+            <div class="form-group">
+              <label for="pub-operation">Operación deseada <span class="req">*</span></label>
+              <select id="pub-operation" name="operation" required>
+                <option value="">Selecciona...</option>
+                <option value="venta">Venta</option>
+                <option value="alquiler">Alquiler</option>
+              </select>
+              <span class="form-error">Selecciona una opción.</span>
+            </div>
+            <div class="form-group">
+              <label for="pub-type">Tipo de inmueble <span class="req">*</span></label>
+              <select id="pub-type" name="type" required>
+                <option value="">Selecciona...</option>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="form-error">Selecciona un tipo.</span>
+            </div>
+            <div class="form-group">
+              <label for="pub-province">Provincia <span class="req">*</span></label>
+              <select id="pub-province" name="province" required>
+                <option value="">Selecciona...</option>
+                <option>San José</option><option>Heredia</option>
+                <option>Alajuela</option><option>Cartago</option>
+                <option>Guanacaste</option><option>Puntarenas</option>
+                <option>Limón</option>
+              </select>
+              <span class="form-error">Selecciona una provincia.</span>
+            </div>
+            <div class="form-group">
+              <label for="pub-canton">Cantón</label>
+              <input id="pub-canton" name="canton" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="pub-price">Precio esperado (USD)</label>
+              <input id="pub-price" name="price" type="number" min="0" />
+            </div>
+            <div class="form-group full">
+              <label for="pub-desc">Descripción del inmueble</label>
+              <textarea id="pub-desc" name="description" rows="4" placeholder="Cuéntanos sobre la propiedad: habitaciones, baños, características..."></textarea>
+            </div>
+            <div class="form-group full">
+              <label style="display:flex;gap:.5rem;align-items:flex-start;font-weight:400">
+                <input type="checkbox" id="pub-auth" name="authorization" required style="width:auto;margin-top:.25rem" />
+                <span>Autorizo a Sales Real Estate a contactarme para conversar sobre las opciones de publicación de mi propiedad. <span class="req">*</span></span>
+              </label>
+              <span class="form-error">Debes autorizar el contacto.</span>
+            </div>
+          </div>
+
+          <p style="font-size:.78rem;color:var(--gray-muted);margin-bottom:1rem">
+            La carga de fotografías se habilitará cuando se integre un servicio de almacenamiento (Cloudinary, S3 o similar).
+          </p>
+
+          <button class="btn btn-primary btn-block" type="submit">Enviar información</button>
+        </form>
+
+        <div class="text-center mt-2">
+          <a class="btn btn-wa" href="${waLink('Hola, quiero información sobre cómo publicar mi propiedad con Sales Real Estate.')}" target="_blank" rel="noopener">
+            O contáctanos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+`;
+
+/* --- NOSOTROS --- */
+VIEWS.nosotros = () => `
+  <section class="page-hero">
+    <div class="container">
+      <h1>Sobre Sales Real Estate</h1>
+      <p>Una inmobiliaria dedicada a acompañar a compradores, arrendatarios y propietarios en Costa Rica.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width:880px">
+      <h2>Nuestra historia</h2>
+      <p style="color:var(--gray-muted);line-height:1.9;margin:.75rem 0 2rem">
+        [CAMPO EDITABLE — Aquí se describirá la historia de Sales Real Estate cuando la empresa proporcione la información oficial.]
+      </p>
+
+      <h2>Misión</h2>
+      <p style="color:var(--gray-muted);line-height:1.9;margin:.75rem 0 2rem">
+        Facilitar el proceso de compra, venta y alquiler de propiedades en Costa Rica mediante una experiencia clara, transparente y personalizada.
+      </p>
+
+      <h2>Visión</h2>
+      <p style="color:var(--gray-muted);line-height:1.9;margin:.75rem 0 2rem">
+        [CAMPO EDITABLE — Ser una inmobiliaria reconocida en Costa Rica por su confiabilidad, transparencia y calidad de servicio.]
+      </p>
+
+      <h2>Valores</h2>
+      <ul style="color:var(--gray-muted);line-height:2;padding-left:1.25rem;margin:.75rem 0 2rem">
+        <li><strong>Transparencia:</strong> información clara en cada operación.</li>
+        <li><strong>Confianza:</strong> acompañamiento cercano y responsable.</li>
+        <li><strong>Profesionalismo:</strong> procesos ordenados y verificables.</li>
+        <li><strong>Servicio:</strong> atención personalizada a cada cliente.</li>
+      </ul>
+
+      <h2>Nuestro equipo</h2>
+      <p style="color:var(--gray-muted);line-height:1.9;margin:.75rem 0 2rem">
+        [CAMPO EDITABLE — El equipo de Sales Real Estate se presentará aquí cuando se proporcionen los datos del personal autorizado.]
+      </p>
+
+      <h2>Forma de trabajar</h2>
+      <p style="color:var(--gray-muted);line-height:1.9;margin:.75rem 0 2rem">
+        Conocemos tus necesidades, te presentamos opciones que se ajusten a tu presupuesto y ubicación, y te acompañamos durante las etapas del proceso. Para propietarios, ofrecemos orientación sobre publicación y promoción del inmueble.
+      </p>
+
+      <h2>Compromiso con el cliente</h2>
+      <p style="color:var(--gray-muted);line-height:1.9;margin:.75rem 0 2rem">
+        Brindar información organizada, comunicación directa y acompañamiento durante el proceso.
+      </p>
+
+      <div class="text-center mt-2">
+        <a class="btn btn-primary" href="#/contacto">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+`;
+
+/* --- CONTACTO --- */
+VIEWS.contacto = () => `
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contáctanos</h1>
+      <p>Cuéntanos qué buscas y un asesor de Sales Real Estate te responderá a la brevedad.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width:900px">
+      <div class="form-notice" id="contactNotice">
+        <strong>Nota:</strong> el envío de este formulario requiere configurar un endpoint real (Formspree, Web3Forms o backend propio).
+      </div>
+
+      <div id="contactFormMsg"></div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="c-name">Nombre completo <span class="req">*</span></label>
+            <input id="c-name" name="name" type="text" required />
+            <span class="form-error">Ingresa tu nombre.</span>
+          </div>
+          <div class="form-group">
+            <label for="c-email">Correo electrónico <span class="req">*</span></label>
+            <input id="c-email" name="email" type="email" required />
+            <span class="form-error">Ingresa un correo válido.</span>
+          </div>
+          <div class="form-group">
+            <label for="c-phone">Teléfono <span class="req">*</span></label>
+            <input id="c-phone" name="phone" type="tel" required />
+            <span class="form-error">Ingresa tu teléfono.</span>
+          </div>
+          <div class="form-group">
+            <label for="c-type">Tipo de consulta <span class="req">*</span></label>
+            <select id="c-type" name="inquiryType" required>
+              <option value="">Selecciona...</option>
+              <option value="comprar">Comprar</option>
+              <option value="alquilar">Alquilar</option>
+              <option value="vender">Vender</option>
+              <option value="publicar">Publicar una propiedad</option>
+            </select>
+            <span class="form-error">Selecciona una opción.</span>
+          </div>
+          <div class="form-group">
+            <label for="c-location">Ubicación de interés</label>
+            <input id="c-location" name="location" type="text" placeholder="Ej. Heredia, San José..." />
+          </div>
+          <div class="form-group">
+            <label for="c-budget">Presupuesto aproximado (USD)</label>
+            <input id="c-budget" name="budget" type="number" min="0" />
+          </div>
+          <div class="form-group full">
+            <label for="c-message">Mensaje <span class="req">*</span></label>
+            <textarea id="c-message" name="message" rows="5" required placeholder="Cuéntanos qué buscas..."></textarea>
+            <span class="form-error">Escribe tu mensaje.</span>
+          </div>
+          <div class="form-group full">
+            <label style="display:flex;gap:.5rem;align-items:flex-start;font-weight:400">
+              <input type="checkbox" id="c-privacy" name="privacy" required style="width:auto;margin-top:.25rem" />
+              <span>He leído y acepto la <a href="#/privacidad" style="color:var(--gold)">política de privacidad</a> y el tratamiento de mis datos personales. <span class="req">*</span></span>
+            </label>
+            <span class="form-error">Debes aceptar la política.</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">Enviar consulta</button>
+      </form>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem" class="contact-info-grid">
+        <div style="text-align:center;padding:1.5rem;background:var(--gray-light);border-radius:var(--radius)">
+          <div style="color:var(--gold);margin-bottom:.5rem">📞</div>
+          <strong style="display:block;font-size:.85rem;color:var(--navy)">Teléfono</strong>
+          <span style="font-size:.85rem;color:var(--gray-muted)">[TELÉFONO]</span>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:var(--gray-light);border-radius:var(--radius)">
+          <div style="color:var(--gold);margin-bottom:.5rem">✉️</div>
+          <strong style="display:block;font-size:.85rem;color:var(--navy)">Correo</strong>
+          <span style="font-size:.85rem;color:var(--gray-muted)">[CORREO]</span>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:var(--gray-light);border-radius:var(--radius)">
+          <div style="color:var(--gold);margin-bottom:.5rem">🕒</div>
+          <strong style="display:block;font-size:.85rem;color:var(--navy)">Horario</strong>
+          <span style="font-size:.85rem;color:var(--gray-muted)">[HORARIO]</span>
+        </div>
+      </div>
+
+      <div class="text-center mt-2">
+        <a class="btn btn-wa" href="${waLink('Hola, estoy buscando una propiedad en Costa Rica. Me gustaría recibir información sobre las opciones disponibles de Sales Real Estate.')}" target="_blank" rel="noopener">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+`;
+
+/* --- PRIVACIDAD / TÉRMINOS --- */
+VIEWS.privacidad = () => `
+  <section class="page-hero"><div class="container"><h1>Política de privacidad</h1></div></section>
+  <section><div class="container" style="max-width:800px">
+    <p style="color:var(--gray-muted);line-height:1.9">
+      [CAMPO EDITABLE — Texto legal de la política de privacidad de Sales Real Estate. Debe incluir: datos que se recopilan,
+      finalidad del tratamiento, base legal, tiempo de conservación, derechos del titular, contacto para ejercer derechos,
+      y demás requisitos aplicables según la legislación costarricense (Ley 8968 de Protección de la Persona frente al
+      Tratamiento de sus Datos Personales y su reglamento).]
+    </p>
+  </div></section>
+`;
+VIEWS.terminos = () => `
+  <section class="page-hero"><div class="container"><h1>Términos de uso</h1></div></section>
+  <section><div class="container" style="max-width:800px">
+    <p style="color:var(--gray-muted);line-height:1.9">
+      [CAMPO EDITABLE — Texto legal de los términos de uso del sitio web de Sales Real Estate.]
+    </p>
+  </div></section>
+`;
+
+/* --- 404 --- */
+VIEWS.notFound = () => `
+  <section class="page-hero"><div class="container"><h1>Página no encontrada</h1></div></section>
+  <section><div class="container text-center">
+    <p style="color:var(--gray-muted);margin-bottom:2rem">La página que buscas no existe o fue movida.</p>
+    <a class="btn btn-primary" href="#/">Volver al inicio</a>
+  </div></section>
+`;
+
+/* ================= ROUTER ================= */
+function parseRoute() {
+  const hash = window.location.hash || '#/';
+  const path = hash.replace(/^#/, '').split('?')[0];
+  const parts = path.split('/').filter(Boolean);
+  return { path, parts };
+}
+
+function setActiveNav(path) {
+  $$('.nav a').forEach(a => {
+    const route = a.getAttribute('data-route');
+    a.classList.toggle('active', route === path || (route !== '/' && path.startsWith(route)));
+  });
+}
+
+function setSEO(title, description) {
+  document.title = title;
+  let meta = document.querySelector('meta[name="description"]');
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.name = 'description';
+    document.head.appendChild(meta);
+  }
+  meta.content = description;
+}
+
+function render() {
+  const { path, parts } = parseRoute();
+  const app = $('#app');
+  let html = '';
+  let seoTitle = 'Sales Real Estate | Propiedades en Costa Rica';
+  let seoDesc = 'Casas y apartamentos en venta y alquiler en Costa Rica con Sales Real Estate.';
+
+  if (path === '/' || path === '') {
+    html = VIEWS.home();
+    seoTitle = 'Sales Real Estate | Casas y apartamentos en venta y alquiler en Costa Rica';
+    seoDesc = 'Encuentra casas y apartamentos en venta y alquiler en las mejores zonas de Costa Rica. Tu próximo hogar comienza aquí.';
+  } else if (path === '/comprar') {
+    html = VIEWS.comprar();
+    seoTitle = 'Casas y apartamentos en venta en Costa Rica | Sales Real Estate';
+    seoDesc = 'Explora propiedades en venta en San José, Heredia, Alajuela, Cartago y más zonas de Costa Rica.';
+  } else if (path === '/alquilar') {
+    html = VIEWS.alquilar();
+    seoTitle = 'Casas y apartamentos en alquiler en Costa Rica | Sales Real Estate';
+    seoDesc = 'Opciones de alquiler mensual de casas y apartamentos en Costa Rica. Consulta disponibilidad.';
+  } else if (parts[0] === 'propiedad' && parts[1]) {
+    html = VIEWS.propiedad(parts[1]);
+    const p = PROPERTIES.find(x => x.id === parts[1]);
+    if (p) {
+      seoTitle = `${p.title} en ${p.location} | Sales Real Estate`;
+      seoDesc = p.description.slice(0, 155);
+    }
+  } else if (path === '/publicar') {
+    html = VIEWS.publicar();
+    seoTitle = 'Publicar mi propiedad | Sales Real Estate';
+    seoDesc = 'Comparte los datos de tu propiedad para conversar con Sales Real Estate sobre opciones de publicación.';
+  } else if (path === '/nosotros') {
+    html = VIEWS.nosotros();
+    seoTitle = 'Nosotros | Sales Real Estate';
+    seoDesc = 'Conoce a Sales Real Estate, inmobiliaria en Costa Rica dedicada a la compra, venta y alquiler de propiedades.';
+  } else if (path === '/contacto') {
+    html = VIEWS.contacto();
+    seoTitle = 'Contacto | Sales Real Estate';
+    seoDesc = 'Contáctanos para comprar, alquilar o publicar tu propiedad en Costa Rica.';
+  } else if (path === '/privacidad') {
+    html = VIEWS.privacidad();
+    seoTitle = 'Política de privacidad | Sales Real Estate';
+  } else if (path === '/terminos') {
+    html = VIEWS.terminos();
+    seoTitle = 'Términos de uso | Sales Real Estate';
+  } else {
+    html = VIEWS.notFound();
+    seoTitle = 'Página no encontrada | Sales Real Estate';
+  }
+
+  setSEO(seoTitle, seoDesc);
+  setActiveNav(path);
+  app.innerHTML = html;
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  bindPageEvents();
+}
+
+window.addEventListener('hashchange', render);
+window.addEventListener('DOMContentLoaded', () => {
+  $('#year').textContent = new Date().getFullYear();
+  $('#headerWa').href = waLink('Hola, estoy buscando una propiedad en Costa Rica. Me gustaría recibir información sobre las opciones disponibles de Sales Real Estate.');
+  render();
+});
+
+/* ================= EVENTOS POR PÁGINA ================= */
+function bindPageEvents() {
+  // Menú móvil
+  const menuToggle = $('#menuToggle');
+  const mainNav = $('#mainNav');
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+  // Cerrar menú al navegar
+  $$('#mainNav a').forEach(a => a.addEventListener('click', () => mainNav?.classList.remove('open')));
+
+  // Buscador hero
+  const heroSearch = $('#heroSearch');
+  if (heroSearch) {
+    let currentOp = 'venta';
+    $$('.search-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        $$('.search-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected','true');
+        currentOp = tab.dataset.op;
+      });
+    });
+    heroSearch.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(heroSearch);
+      const params = new URLSearchParams();
+      ['type','province','minPrice','maxPrice'].forEach(k => {
+        const v = fd.get(k);
+        if (v) params.set(k, v);
+      });
+      const route = currentOp === 'venta' ? '/comprar' : '/alquilar';
+      window.location.hash = `#${route}${params.toString() ? '?' + params.toString() : ''}`;
+    });
+  }
+
+  // Filtros del listado
+  const listingFilters = $('#listingFilters');
+  if (listingFilters) {
+    listingFilters.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(listingFilters);
+      const params = new URLSearchParams();
+      fd.forEach((v, k) => { if (v) params.set(k, v); });
+      const { path } = parseRoute();
+      window.location.hash = `#${path}${params.toString() ? '?' + params.toString() : ''}`;
+    });
+    const clearBtn = $('#clearFilters');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        const { path } = parseRoute();
+        window.location.hash = `#${path}`;
+      });
+    }
+  }
+
+  // Ordenamiento
+  const sortSelect = $('#sortSelect');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      const params = new URLSearchParams(getAllParams());
+      params.set('sort', sortSelect.value);
+      const { path } = parseRoute();
+      window.location.hash = `#${path}?${params.toString()}`;
+    });
+  }
+
+  // Galería de propiedad
+  const galleryThumbs = $('#galleryThumbs');
+  if (galleryThumbs) {
+    galleryThumbs.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-img]');
+      if (!btn) return;
+      const mainImg = $('#galleryMainImg');
+      mainImg.src = btn.dataset.img;
+      mainImg.alt = `Imagen ${Number(btn.dataset.index) + 1}`;
+      $$('#galleryThumbs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  }
+
+  // Favoritos (localStorage)
+  $$('[data-fav]').forEach(btn => {
+    const id = btn.dataset.fav;
+    const favs = JSON.parse(localStorage.getItem('sre_favs') || '[]');
+    if (favs.includes(id)) btn.classList.add('active');
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const current = JSON.parse(localStorage.getItem('sre_favs') || '[]');
+      const idx = current.indexOf(id);
+      if (idx === -1) current.push(id);
+      else current.splice(idx, 1);
+      localStorage.setItem('sre_favs', JSON.stringify(current));
+      btn.classList.toggle('active');
+    });
+  });
+
+  // Formulario de propiedad
+  const propForm = $('#propertyContactForm');
+  if (propForm) {
+    propForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!validateForm(propForm)) return;
+      const fd = new FormData(propForm);
+      const data = Object.fromEntries(fd.entries());
+      data.propertyRef = propForm.dataset.ref;
+      data.propertyTitle = propForm.dataset.title;
+      data.formType = 'consulta_propiedad';
+      submitForm(propForm, '#propFormMsg', data);
+    });
+  }
+
+  // Botón solicitar visita
+  const requestVisitBtn = $('#requestVisitBtn');
+  if (requestVisitBtn) {
+    requestVisitBtn.addEventListener('click', () => {
+      const msg = `Hola, me gustaría coordinar una visita a la propiedad ${requestVisitBtn.dataset.ref} (${requestVisitBtn.dataset.title}). ¿Qué horarios tienen disponibles?`;
+      window.open(waLink(msg), '_blank');
+    });
+  }
+
+  // Formulario de contacto
+  const contactForm = $('#contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!validateForm(contactForm)) return;
+      const data = Object.fromEntries(new FormData(contactForm).entries());
+      data.formType = 'contacto_general';
+      submitForm(contactForm, '#contactFormMsg', data);
+    });
+  }
+
+  // Formulario de publicar
+  const publishForm = $('#publishForm');
+  if (publishForm) {
+    publishForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!validateForm(publishForm)) return;
+      const data = Object.fromEntries(new FormData(publishForm).entries());
+      data.formType = 'publicar_propiedad';
+      submitForm(publishForm, '#contactFormMsg', data, '#publishFormContainer');
+    });
+  }
+}
+
+/* ================= VALIDACIÓN Y ENVÍO ================= */
+function validateForm(form) {
+  let ok = true;
+  $$('.form-group', form).forEach(g => g.classList.remove('error'));
+  $$('[required]', form).forEach(field => {
+    const group = field.closest('.form-group');
+    let invalid = false;
+    if (field.type === 'checkbox') invalid = !field.checked;
+    else if (!field.value.trim()) invalid = true;
+    else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) invalid = true;
+    if (invalid) { ok = false; if (group) group.classList.add('error'); }
+  });
+  if (!ok) {
+    const firstError = $('.form-group.error', form);
+    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  return ok;
+}
+
+async function submitForm(form, msgSelector, data, containerSelector) {
+  const msgBox = $(msgSelector);
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+
+  if (!CONFIG.formEndpoint) {
+    if (msgBox) {
+      msgBox.innerHTML = `<div class="form-notice">
+        <strong>Formulario no configurado.</strong> Para enviar los datos realmente, configura
+        <code>CONFIG.formEndpoint</code> en el script con tu endpoint de Formspree, Web3Forms o backend propio.
+        <br><br>Datos que se enviarían:
+        <pre style="white-space:pre-wrap;font-size:.75rem;margin-top:.5rem;background:#fff;padding:.5rem;border-radius:4px">${escapeHtml(JSON.stringify(data, null, 2))}</pre>
+      </div>`;
+    }
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Enviando...';
+
+  try {
+    const body = { ...data };
+    if (CONFIG.formAccessKey) body.access_key = CONFIG.formAccessKey;
+
+    const res = await fetch(CONFIG.formEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(body)
+    });
+
+    if (!res.ok) throw new Error('Error en el envío');
+
+    if (msgBox) msgBox.innerHTML = `<div class="form-success">✓ ¡Gracias! Hemos recibido tu mensaje. Un asesor de Sales Real Estate te contactará a la brevedad.</div>`;
+    form.reset();
+    $$('.form-group', form).forEach(g => g.classList.remove('error'));
+  } catch (err) {
+    if (msgBox) msgBox.innerHTML = `<div class="form-notice" style="background:#fdecea;border-color:#e74c3c;color:#b71c1c">
+      No pudimos enviar tu mensaje. Por favor intenta de nuevo o contáctanos por WhatsApp.
+    </div>`;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+}
+
+/* Actualizar enlace de WhatsApp del header por si cambia CONFIG */
+document.addEventListener('DOMContentLoaded', () => {
+  const el = $('#headerWa');
+  if (el) el.href = waLink('Hola, estoy buscando una propiedad en Costa Rica. Me gustaría recibir información sobre las opciones disponibles de Sales Real Estate.');
+});
+</script>
+</body>
+</html>
